@@ -1,0 +1,5 @@
+- [] Controllers
+    entender decorators
+- [] Services
+- [] Injeção de dependencias
+- [] Modules
