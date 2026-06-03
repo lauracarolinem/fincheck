@@ -1,5 +1,22 @@
-- [] Controllers
+- [] Controllers: recebe as requisições http e faz alguma coisa.
     entender decorators
-- [] Services
-- [] Injeção de dependencias
-- [] Modules
+- [] Services: camada onde tem as regras de negocio/casos de uso(tem outras definições de services aparentemente)
+- [] Modules: são caixinhas organizadas em entidades que tem sua propria regra de negocio e nao conversa com outras - como se fosse "microserviços" (ex: tem o modulo de bank account que tem suas proprias regras e não acessa o modulo users)
+    - TODOS AS CLASSES INJETAVEIS PRECISAM ESTAR DENTRO DOS PROVIDERS DO MODULES, SE N A APLICAÇÃO QUEBRA
+- [] Injeção de dependencias: nao entendi muito bem, rever isso (min-24:33)
+- [] Inversao de dependencias: nao entendi tambem, mas aparentemente o nest n tem inversão só injeção
+
+
+ORM -> object relational mapping
+    - camada de abstração pra nao precisar escrever sql na mao
+    - lidar com o banco como se fosse um grande objeto e lidar com o banco por meio de metodos em objetos (ex: user.find)
+    - nao sao tao otimizados em busca, entao as vezes uma query pode sobrecarregar o banco. 
+
+
+Prisma:
+Como entrar no prisma no docker: 
+    - docker exec -it pg bash
+    - psql -U senha(root)
+    - \c nome_banco
+    - \dt -> para listar as tabelas
+Como rodar o migration -> npx prisma migrate dev (cria uma migration)
